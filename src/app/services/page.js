@@ -1,3 +1,9 @@
+import TestInview from "../_components/test-inview";
+
 export default function Service() {
-  return <div>Service</div>;
+  return (
+    <div>
+      <TestInview />
+    </div>
+  );
 }

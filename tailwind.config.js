@@ -10,6 +10,7 @@ module.exports = {
       backgroundColor: {
         "hsla-white": "hsla(0, 0%, 100%, 0.7)",
         search: "hsla(40,20%,97%,0.7);",
+        "custom-white": "#f9f8f6",
       },
       boxShadow: {
         "nav-shadow": "0 0 15px rgba(0,0,0,.1)",

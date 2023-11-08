@@ -13,7 +13,7 @@ export default function RootLayout({ children }) {
     <html>
       <body className={inter.className}>
         <Navbar />
-        <div className="bg-[#f9f8f6]">{children}</div>
+        <div className="bg-custom-white">{children}</div>
       </body>
     </html>
   );

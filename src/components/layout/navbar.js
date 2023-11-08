@@ -41,10 +41,10 @@ export default function Navbar() {
 
   return (
     <header className="fixed z-50 w-full">
-      <div className="hidden lg:block lg:h-[10px] lg:bg-[#f9f8f6] lg:w-full"></div>
-      <div className="container bg-[#f9f8f6] lg:bg-transparent flex justify-between">
+      <div className="hidden lg:block lg:h-[10px] lg:bg-custom-white lg:w-full"></div>
+      <div className="container bg-custom-white lg:bg-transparent flex justify-between">
         <div className="flex items-center h-[60px] lg:h-[80px]">
-          <div className="relative h-full w-[166px] lg:w-[261px] bg-[#f9f8f6] lg:rounded-br-[30px] before:hidden before:lg:block before:content-['Naarm/Melbourne'] before:top-0 before:left-[15px] z-10 before:absolute before:text-xs">
+          <div className="relative h-full w-[166px] lg:w-[261px] bg-custom-white lg:rounded-br-[30px] before:hidden before:lg:block before:content-['Naarm/Melbourne'] before:top-0 before:left-[15px] z-10 before:absolute before:text-xs">
             <InvertedCorner
               className={"absolute top-0 -right-[30px]"}
               width={30}

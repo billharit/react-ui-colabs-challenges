@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+body {
+  scroll-behavior: smooth;
+}
+
 .container {
   width: 100%;
   margin: auto;
@@ -15,10 +19,26 @@
   }
 }
 
+.video-font {
+  font-size: clamp(2.625rem, 2.114rem + 1.64vw, 3.75rem);
+}
+
 @media screen and (max-width: 500px) {
   .container {
     padding: 0 10px;
   }
+  .video-font {
+    font-size: 42px;
+  }
+}
+
+.stats-font {
+  font-size: clamp(4.375rem, 4.091rem + 0.91vw, 5rem);
+}
+
+.custom-em em {
+  font-style: normal;
+  color: #d9db4d;
 }
 
 /* #region  /**=========== Fade In =========== */
