@@ -61,8 +61,8 @@ export default function StatsCard() {
             </span>
           </div>
         ))}
-        <div className="absolute flex items-center right-[20px] top-0 bottom-0  sm:rotate-0 sm:bottom-[30px] sm:top-auto sm:right-0 sm:left-0">
-          <div className="flex rotate-90 translate-x-1/2 sm:rotate-0 items-center justify-center gap-2">
+        <div className="absolute flex items-center sm:block right-[20px] top-0 bottom-0 sm:bottom-[30px] sm:top-auto sm:right-0 sm:left-0">
+          <div className="flex rotate-90 translate-x-1/2 sm:translate-x-0 sm:rotate-0 items-center justify-center gap-2">
             {statsList.map((_, index) => (
               <div
                 key={index}
