@@ -7,6 +7,7 @@ import { useEffect, useState } from "react";
 import { BsInstagram, BsFacebook } from "react-icons/bs";
 import { LiaSearchSolid } from "react-icons/lia";
 import { usePathname } from "next/navigation";
+import InvertedCorner from "../shared/inverted-corner";
 
 const navList = [
   { title: "Services", url: "/services" },
@@ -44,6 +45,16 @@ export default function Navbar() {
       <div className="container bg-[#f9f8f6] lg:bg-transparent flex justify-between">
         <div className="flex items-center h-[60px] lg:h-[80px]">
           <div className="relative h-full w-[166px] lg:w-[261px] bg-[#f9f8f6] lg:rounded-br-[30px] before:hidden before:lg:block before:content-['Naarm/Melbourne'] before:top-0 before:left-[15px] z-10 before:absolute before:text-xs">
+            <InvertedCorner
+              className={"absolute top-0 -right-[30px]"}
+              width={30}
+              height={30}
+            />
+            <InvertedCorner
+              className={"absolute left-0 -bottom-[30px]"}
+              width={30}
+              height={30}
+            />
             <Image
               src="/logo.svg"
               alt="Colabs Logo"
@@ -105,25 +116,55 @@ export default function Navbar() {
           >
             {isNavbarOpened ? <span>Close</span> : <span>Menu</span>}
           </button>
-          <ul className="border-black border-2 gap-[10px] py-[5px] px-[12px] flex items-center justify-center rounded-[30px] ">
-            {socmedList.map((item, index) => (
-              <li key={index} className="hover:text-[#005241]">
-                <Link href={item.url}>{item.title}</Link>
-              </li>
-            ))}
-          </ul>
+          <div
+            className={clsx(
+              "h-full w-full flex items-center transition-all duration-300 px-4 rounded-t-[20px] relative",
+              {
+                "bg-[#d9db4d]": isNavbarOpened,
+                "bg-transparent": !isNavbarOpened,
+              }
+            )}
+          >
+            <InvertedCorner
+              className={clsx(
+                "absolute -left-5 bottom-0 -translate-y-1 duration-300 transition-opacity rotate-180",
+                {
+                  "opacity-100": isNavbarOpened,
+                  "opacity-0": !isNavbarOpened,
+                }
+              )}
+              width={20}
+              height={20}
+              fill={"#d9db4d"}
+            />
+            <ul
+              className={clsx(
+                " gap-[10px] py-[5px] px-[12px] flex items-center justify-center rounded-[30px] ",
+                {
+                  "bg-[#d9db4d]": isNavbarOpened,
+                  "outline-black outline-2 outline": !isNavbarOpened,
+                }
+              )}
+            >
+              {socmedList.map((item, index) => (
+                <li key={index} className="hover:text-[#005241]">
+                  <Link href={item.url}>{item.title}</Link>
+                </li>
+              ))}
+            </ul>
+          </div>
         </div>
       </div>
       <div
         className={clsx(
-          "lg:hidden absolute top-[60px] left-1/2 -translate-x-1/2  w-[calc(100%-20px)]",
+          "lg:hidden absolute top-[60px] left-1/2 -translate-x-1/2 transition-all duration-300 w-[calc(100%-20px)]",
           {
-            block: isNavbarOpened,
-            hidden: !isNavbarOpened,
+            "visible opacity-100 fade-in-start ": isNavbarOpened,
+            "invisible opacity-0": !isNavbarOpened,
           }
         )}
       >
-        <div className="bg-[#d9db4d] items-center rounded-l-[30px] container rounded-b-[30px] justify-center w-full flex flex-col">
+        <div className="bg-[#d9db4d]  items-center rounded-l-[30px] container rounded-b-[30px] justify-center w-full flex flex-col">
           <span className="font-semibold py-7">Welcome to Colabs</span>
           <div className="flex items-center justify-end shrink-0 relative w-full">
             <div className="bg-hsla-white h-[58px] w-full  shadow-nav-shadow rounded-[35px] absolute z-10 flex items-center overflow-hidden backdrop-blur-[10px]">
@@ -142,11 +183,15 @@ export default function Navbar() {
           </div>
           <nav className="w-full">
             <ul className="w-full text-[32px] pt-6 pb-10">
-              <li className="border-b border-black py-[15px]">
+              <li data-fade="1" className="border-b border-black py-[15px]">
                 <Link href="/">Home </Link>
               </li>
               {navList.map((item, index) => (
-                <li key={index} className="border-b border-black py-[15px]">
+                <li
+                  key={index}
+                  data-fade={index + 1}
+                  className="border-b border-black py-[15px]"
+                >
                   <Link href={item.url}>{item.title}</Link>
                 </li>
               ))}
