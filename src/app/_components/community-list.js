@@ -33,12 +33,12 @@ export default function CommunityList() {
   ];
   return (
     <div className="w-full container narrow flex justify-between flex-wrap lg:flex-nowrap">
-      <div className="w-[200px] flex-shrink-0">
+      <div className="w-[200px] flex-shrink-0 pb-[15px]">
         <span className="rounded-[20px] py-[5px] px-[10px] border border-black">
           Community
         </span>
       </div>
-      <div className="grid grid-cols-3 w-full gap-[10px] ">
+      <div className="grid sm:grid-cols-3 w-full gap-[10px] ">
         {dataList.map((item, index) => (
           <div
             key={index}
@@ -47,7 +47,7 @@ export default function CommunityList() {
             <div className="aspect-square mb-[10px] rounded-[30px] overflow-hidden relative">
               <div className="p-[15px] relative z-10">
                 <span
-                  className={`rounded-[20px] z-10 py-[5px] px-[10px]  text-black bg-[${item.tagColor}]`}
+                  className={`rounded-[20px] z-10 py-[5px] px-[10px] text-lg font-medium text-black bg-[${item.tagColor}]`}
                 >
                   {item.tags}
                 </span>
@@ -55,6 +55,7 @@ export default function CommunityList() {
               <Image
                 src={item.image}
                 fill
+                sizes="100%"
                 alt={item.header}
                 className="h-full group-hover:scale-110 object-cover transition-transform ease-out duration-500"
               />

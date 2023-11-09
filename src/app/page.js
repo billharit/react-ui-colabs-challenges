@@ -57,14 +57,9 @@ export default function Home() {
           Space for big thinking, problem-solvers and bio-innovators
         </h2>
       </section>
-      <section className="w-full mt-20">
+      <section className="w-full my-20">
         <CommunityList />
       </section>
-      <section className="w-full mt-20">
-        <ContactUsSection />
-      </section>
-
-      <section className="min-h-screen"></section>
     </main>
   );
 }

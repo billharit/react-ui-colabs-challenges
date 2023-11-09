@@ -6,8 +6,8 @@ import { AiOutlineArrowRight } from "react-icons/ai";
 
 export default function CardCollectionSection() {
   return (
-    <div className="grid grid-cols-2 grid-rows-2 container gap-[10px]">
-      <div className="row-span-2 group bg-[#b1653b] rounded-[30px]">
+    <div className="grid grid-rows-3 sm:grid-cols-2 sm:grid-rows-2 container gap-[10px]">
+      <div className="row-span-1 sm:row-span-2 group bg-[#b1653b] rounded-[30px]">
         <div className="flex rounded-[30px]  h-full w-full items-center justify-center duration-300 relative transition-transform">
           <div className="py-5 px-[30px] w-full">
             <span>
@@ -19,6 +19,7 @@ export default function CardCollectionSection() {
                   fill
                   src="/crystal.webp"
                   alt="crystal"
+                  sizes="100%"
                   className="rounded-full group-hover:scale-110 transition-transform duration-300"
                 />
               </div>
@@ -73,6 +74,7 @@ export default function CardCollectionSection() {
         <div className="absolute top-0 left-0 w-full h-full overflow-hidden rounded-[30px]">
           <Image
             fill
+            sizes="100%"
             src="/bigideas.jpg"
             alt="bigideas"
             className="object-cover"

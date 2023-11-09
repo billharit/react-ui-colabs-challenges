@@ -55,24 +55,25 @@ export default function TwoSideCarousel() {
   });
 
   return (
-    <div className="container grid grid-cols-3 gap-[10px]">
-      <div className="col-span-2  h-full w-full flex  overflow-hidden rounded-[20px]">
+    <div className="container grid grid-cols-1 sm:grid-cols-3 sm:gap-[10px]">
+      <div className="sm:col-span-2 h-full w-full flex overflow-hidden rounded-t-[20px] sm:rounded-[20px]">
         {dataList.map((item, i) => (
           <div
-            className="relative w-full sm:aspect-square lg:aspect-[1.5/1] shrink-0 flex transition-transform ease-out duration-500"
+            className="relative w-full aspect-[1.5/1]  sm:aspect-square lg:aspect-[1.5/1] shrink-0 flex transition-transform ease-out duration-500"
             key={i}
             style={{ transform: `translateX(-${current * 100}%)` }}
           >
             <Image
               src={item.image}
               fill
+              sizes="100%"
               alt={item.header}
               className="h-full object-cover transition-transform ease-out duration-500"
             />
           </div>
         ))}
       </div>
-      <div className="col-span 1 relative rounded-[20px] h-full flex bg-[#eaf1fc] overflow-hidden">
+      <div className="col-span 1 relative rounded-b-[20px] sm:rounded-[20px] h-full flex bg-[#eaf1fc] overflow-hidden">
         {dataList.map((item, i) => (
           <div
             key={i}
@@ -87,7 +88,7 @@ export default function TwoSideCarousel() {
             <h4 className="leading-[1.1] lg:max-w-[450px] tracking-tighter font-semibold">
               {item.header}
             </h4>
-            <p className="leading-[1.15] lg:max-w-[450px] span-font tracking-tighter">
+            <p className="leading-[1.15] lg:max-w-[450px] span-font tracking-tighter pb-10">
               {item.paragraph}
             </p>
           </div>

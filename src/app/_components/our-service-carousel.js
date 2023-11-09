@@ -82,6 +82,7 @@ export default function OurServiceCarousel() {
                   <div className="w-[90%] sm:w-3/5 sm:max-w-[300px] overflow-hidden rounded-full relative aspect-square -mt-10 sm:mt-auto mr-auto sm:mb-auto ml-auto">
                     <Image
                       fill
+                      sizes="100%"
                       src={item.image}
                       alt={item.header}
                       className="rounded-full group-hover:scale-110 transition-transform duration-300"

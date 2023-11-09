@@ -60,6 +60,7 @@ export default function Navbar() {
               alt="Colabs Logo"
               className="pt-[15px] pr-[15px] pb-[15px] lg:pt-[25px] lg:pr-[30px] lg:pb-[12px] lg:pl-[15px] translate-y-[3px] lg:-translate-y-1"
               fill={true}
+              sizes="100%"
               priority
             />
           </div>
