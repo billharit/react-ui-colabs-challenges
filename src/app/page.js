@@ -4,6 +4,7 @@ import StatsCard from "./_components/stats-card";
 import TestInview from "./_components/test-inview";
 import ContactCard from "./_components/contact-card";
 import CommunityCard from "./_components/community-card";
+import OurServiceCarousel from "./_components/our-service-carousel";
 
 export const metadata = {
   title: "Colabs - Making space for transformative innovation.",
@@ -12,10 +13,10 @@ export const metadata = {
 
 export default function Home() {
   return (
-    <main className="container flex min-h-screen bg-custom-white flex-col items-center ">
+    <main className="flex min-h-screen bg-custom-white flex-col items-center ">
       <section
         id="section-one"
-        className="pt-16 lg:pt-[10px] w-full h-auto sm:h-[95vh] min-h-[630px] gap-[10px] justify-between flex flex-col sm:flex-row"
+        className="container pt-16 lg:pt-[10px] mb-20 w-full h-auto sm:h-[95vh] min-h-[630px] gap-[10px] justify-between flex flex-col sm:flex-row"
       >
         <VideoHero />
         <div className="sm:w-[200px] lg:w-[270px] gap-[10px] shrink-0 flex flex-col items-center">
@@ -26,13 +27,18 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section id="section-two" className="min-h-screen">
-        Second Section
+      <section id="section-two" className="mt-20 mb-10 w-full">
+        <div className="container narrow">
+          <h2 className="tracking-tighter sm:max-w-[880px] leading-tight">
+            We design, build and run collaborative spaces where bio-led science,
+            technology and people can thrive
+          </h2>
+        </div>
       </section>
-      <TestInview />
-      <section id="section-three" className="min-h-screen ">
-        Third Section
+      <section id="section-three" className="mb-10 w-full">
+        <OurServiceCarousel />
       </section>
+      <section className="min-h-screen">a</section>
     </main>
   );
 }
