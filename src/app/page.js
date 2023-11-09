@@ -5,6 +5,11 @@ import TestInview from "./_components/test-inview";
 import ContactCard from "./_components/contact-card";
 import CommunityCard from "./_components/community-card";
 import OurServiceCarousel from "./_components/our-service-carousel";
+import Principles from "./_components/principle";
+import CardCollectionSection from "./_components/card-collection-section";
+import TwoSideCarousel from "./_components/two-side-carousel";
+import CommunityList from "./_components/community-list";
+import ContactUsSection from "./_components/contact-us-section";
 
 export const metadata = {
   title: "Colabs - Making space for transformative innovation.",
@@ -38,7 +43,28 @@ export default function Home() {
       <section id="section-three" className="mb-10 w-full">
         <OurServiceCarousel />
       </section>
-      <section className="min-h-screen">a</section>
+      <section className="my-20 w-full">
+        <Principles />
+      </section>
+      <section className="mb-2 w-full">
+        <CardCollectionSection />
+      </section>
+      <section className="mb-20 w-full">
+        <TwoSideCarousel />
+      </section>
+      <section className=" container narrow">
+        <h2 className="max-w-[860px] leading-[1.1] tracking-tighter">
+          Space for big thinking, problem-solvers and bio-innovators
+        </h2>
+      </section>
+      <section className="w-full mt-20">
+        <CommunityList />
+      </section>
+      <section className="w-full mt-20">
+        <ContactUsSection />
+      </section>
+
+      <section className="min-h-screen"></section>
     </main>
   );
 }
