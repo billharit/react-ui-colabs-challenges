@@ -1,9 +1,20 @@
 import TestInview from "../_components/test-inview";
+import StackingCardSection from "./_components/stacking-card-section";
+import VideoServiceSection from "./_components/video-service-sections";
+import WhyColabSection from "./_components/why-colabs-sections";
 
 export default function Service() {
   return (
-    <div>
-      <TestInview />
-    </div>
+    <main className="pb-20">
+      <div className="pt-[10px] pb-10">
+        <VideoServiceSection />
+      </div>
+      <div className="min-h-screen">
+        <StackingCardSection />
+      </div>
+      <div className="">
+        <WhyColabSection />
+      </div>
+    </main>
   );
 }

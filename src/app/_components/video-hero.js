@@ -16,7 +16,7 @@ export default function VideoHero() {
       ></video>
       <div
         className={clsx(
-          "absolute z-10 max-w-[300px] sm:max-w-[70%] lg:max-w-[50%] bottom-0 scroll-smooth bg-custom-white fade-in-start left-0  rounded-tr-[30px]"
+          "absolute z-10 max-w-[300px] sm:max-w-[70%] lg:max-w-[50%] bottom-0 bg-custom-white fade-in-start left-0  rounded-tr-[30px]"
         )}
       >
         <div className="relative h-full w-full pt-5 pr-5">
@@ -38,7 +38,7 @@ export default function VideoHero() {
             <div className="block sm:hidden"></div> space for transformative
             innovation
           </h1>
-          <Link href="#section-three" className="scroll-smooth">
+          <Link href="#section-two">
             <button
               className="hidden rounded-full h-[50px] w-[50px] border border-black mt-5 sm:flex items-center justify-center"
               data-fade="2"

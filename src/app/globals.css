@@ -2,7 +2,41 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: "Matter SQ Regular";
+  src: url("https://db.onlinewebfonts.com/t/8611cf274fd66935b8f771ac84029521.eot");
+  src: url("https://db.onlinewebfonts.com/t/8611cf274fd66935b8f771ac84029521.eot?#iefix")
+      format("embedded-opentype"),
+    url("https://db.onlinewebfonts.com/t/8611cf274fd66935b8f771ac84029521.woff2")
+      format("woff2"),
+    url("https://db.onlinewebfonts.com/t/8611cf274fd66935b8f771ac84029521.woff")
+      format("woff"),
+    url("https://db.onlinewebfonts.com/t/8611cf274fd66935b8f771ac84029521.ttf")
+      format("truetype"),
+    url("https://db.onlinewebfonts.com/t/8611cf274fd66935b8f771ac84029521.svg#Matter SQ Regular")
+      format("svg");
+}
+@font-face {
+  font-family: "Matter SQ Medium";
+  src: url("https://db.onlinewebfonts.com/t/367cb1d4d8a017fec88cbbcf75d6b3cc.eot");
+  src: url("https://db.onlinewebfonts.com/t/367cb1d4d8a017fec88cbbcf75d6b3cc.eot?#iefix")
+      format("embedded-opentype"),
+    url("https://db.onlinewebfonts.com/t/367cb1d4d8a017fec88cbbcf75d6b3cc.woff2")
+      format("woff2"),
+    url("https://db.onlinewebfonts.com/t/367cb1d4d8a017fec88cbbcf75d6b3cc.woff")
+      format("woff"),
+    url("https://db.onlinewebfonts.com/t/367cb1d4d8a017fec88cbbcf75d6b3cc.ttf")
+      format("truetype"),
+    url("https://db.onlinewebfonts.com/t/367cb1d4d8a017fec88cbbcf75d6b3cc.svg#Matter SQ Medium")
+      format("svg");
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
 body {
+  font-family: "Matter SQ Regular" !important;
   scroll-behavior: smooth;
 }
 
@@ -20,6 +54,9 @@ body {
 
 @media screen and (max-width: 1024px) {
   .container {
+    padding: 0 20px;
+  }
+  .narrow {
     padding: 0 20px;
   }
 }
@@ -44,6 +81,16 @@ h5 {
   font-size: clamp(1.313rem, 1.17rem + 0.45vw, 1.625rem);
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  line-height: 1.1;
+  letter-spacing: -0.05em;
+}
+
 h3,
 h4,
 h5 {
@@ -56,6 +103,8 @@ h5 {
   }
   .video-font {
     font-size: 42px;
+  }
+  .narrow {
   }
 }
 
