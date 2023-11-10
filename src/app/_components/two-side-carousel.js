@@ -87,7 +87,7 @@ export default function TwoSideCarousel() {
           </div>
           <div
             className={clsx(
-              "col-span 1 relative rounded-b-[20px] sm:rounded-[20px] h-full flex bg-[#eaf1fc] overflow-hidden duration-300 delay-100",
+              "col-span-1 cursor-grab relative rounded-b-[20px] sm:rounded-[20px] h-full flex bg-[#eaf1fc] overflow-hidden duration-300 delay-100",
               inView && "opacity-100 translate-x-0",
               !inView && "opacity-0 translate-x-10"
             )}
@@ -111,8 +111,12 @@ export default function TwoSideCarousel() {
                 </p>
               </div>
             ))}
-            <div className="absolute bottom-0 right-0 rounded-tl-[30px] z-10 bg-custom-white w-[60px] h-[60px]">
+
+            <div className="absolute cursor-pointer group bottom-0 right-0 rounded-tl-[30px] z-10 bg-custom-white w-[60px] h-[60px]">
               <div className="relative h-full w-full">
+                <span className="span-font absolute w-[100px] top-3 right-[80px]">
+                  Read More
+                </span>
                 <InvertedCorner
                   className={"absolute bottom-0 -left-[20px] rotate-180"}
                   width={20}

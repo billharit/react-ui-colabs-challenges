@@ -50,7 +50,7 @@ export default function StackingCardSection() {
           {dataList.map((item, index) => (
             <li
               key={index}
-              className="rounded-[30px] font-bold self-auto flex items-center justify-center cursor-pointer border py-[10px] text-xs lg:text-xl w-1/3 lg:w-auto px-[15px] sm:text- sm:px-[10px] lg:px-[15px] sm:py-[10px] text-center"
+              className="rounded-[30px] font-semibold self-auto flex items-center justify-center cursor-pointer border py-[10px] text-xs lg:text-xl w-1/3 lg:w-auto px-[15px] sm:text- sm:px-[10px] lg:px-[15px] sm:py-[10px] text-center"
               style={{ backgroundColor: item.bgColor }}
             >
               <Link href={`#card${index + 1}`}>{item.tags}</Link>

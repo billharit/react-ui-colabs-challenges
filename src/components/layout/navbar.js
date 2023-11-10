@@ -73,7 +73,7 @@ export default function Navbar() {
                   key={index}
                   className={clsx(
                     "px-[15px] hover:text-[#005241]",
-                    pathChange == item.url && "font-bold"
+                    pathChange == item.url && "font-semibold"
                   )}
                 >
                   <Link href={item.url}>{item.title}</Link>
@@ -210,7 +210,7 @@ export default function Navbar() {
                 >
                   <Link
                     className={clsx(
-                      pathChange == item.url && "font-bold text-[#005241]"
+                      pathChange == item.url && "font-semibold text-[#005241]"
                     )}
                     href={item.url}
                   >

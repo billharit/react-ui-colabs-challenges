@@ -78,19 +78,27 @@ export default function Footer() {
             <div className="grid max-w-[400px]  grid-cols-2 grid-rows-2 tracking-tighter leading-[1.1] gap-5 text-white">
               <span className="line-clamp-3">
                 CoLabs Coworking 1/306 Albert St, Brunswick <br />
-                <a href="tel:(03) 9111 2399">(03) 9111 2399</a>
+                <a className="hover:underline" href="tel:(03) 9111 2399">
+                  (03) 9111 2399
+                </a>
               </span>
               <span className="line-clamp-3">
                 17/306 Albert St, Brunswick <br />
-                <a href="tel:(03) 9111 2399">(03) 9111 2399</a>
+                <a className="hover:underline" href="tel:(03) 9111 2399">
+                  (03) 9111 2399
+                </a>
               </span>
               <span className="line-clamp-3">
                 20/306 Albert St, Brunswick <br />
-                <a href="tel:(03) 9111 2399">(03) 9111 2399</a>
+                <a className="hover:underline" href="tel:(03) 9111 2399">
+                  (03) 9111 2399
+                </a>
               </span>
               <span className="line-clamp-3">
                 2 Acacia Place, Notting Hill <br />
-                <a href="tel:(03) 9111 2399">(03) 9111 2399</a>
+                <a className="hover:underline" href="tel:(03) 9111 2399">
+                  (03) 9111 2399
+                </a>
               </span>
             </div>
             <nav className="mt-10">
@@ -137,7 +145,7 @@ export default function Footer() {
                 </li>
               </ul>
             </nav>
-            <div className="flex sm:justify-between flex-col-reverse sm:flex-row pt-[30px] sm:pt-[100px] gap-5 sm:gap-0 pb-5">
+            <div className="flex sm:justify-between sm:items-center flex-col-reverse sm:flex-row pt-[30px] sm:pt-[100px] gap-5 sm:gap-0 pb-5 sm:pb-0">
               <div className="relative w-[200px] ">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 99.15">
                   <path
@@ -176,22 +184,22 @@ export default function Footer() {
               </div>
               <ul className="text-white flex sm:flex-col lg:flex-row sm:justify-between gap-5">
                 <li>
-                  <Link href="/">
+                  <Link className="hover:opacity-70 duration-300" href="/">
                     <BsInstagram size={24} />
                   </Link>
                 </li>
                 <li>
-                  <Link href="/">
+                  <Link className="hover:opacity-70 duration-300" href="/">
                     <BsFacebook size={24} />
                   </Link>
                 </li>
                 <li>
-                  <Link href="/">
+                  <Link className="hover:opacity-70 duration-300" href="/">
                     <BsLinkedin size={24} />
                   </Link>
                 </li>
                 <li>
-                  <Link href="/">
+                  <Link className="hover:opacity-70 duration-300" href="/">
                     <BsTwitter size={24} />
                   </Link>
                 </li>

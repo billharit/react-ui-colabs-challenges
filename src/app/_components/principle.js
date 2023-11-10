@@ -66,7 +66,7 @@ export default function Principles() {
                 inView && "translate-y-0 opacity-100"
               )}
             >
-              <span className="span-font bg-[#66662a] px-[15px] py-[5px] rounded-[20px]">
+              <span className="leading-4 span-font bg-[#66662a] px-[15px] py-[5px] rounded-[20px]">
                 Our Principle
               </span>
               <div className="bg-[#66662a] flex items-center justify-center rounded-full w-[50px] h-[50px] aspect-square">

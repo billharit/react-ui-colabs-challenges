@@ -11,7 +11,11 @@ export default function StatsCard() {
   const autoSlideInterval = 4000;
   const statsList = [
     { header: 26, suffix: "", desc: "Ideas Supported" },
-    { header: 5, suffix: "", desc: "Impact Scholarships Awarded" },
+    {
+      header: 5,
+      suffix: "",
+      desc: "Impact Scholarships Awarded",
+    },
     {
       header: 65,
       suffix: "%",
@@ -23,6 +27,7 @@ export default function StatsCard() {
       desc: "Chance of running into a punny scientist",
     },
     {
+      smallerText: true,
       header: 2000,
       suffix: "kgs",
       desc: "Of science equipment diverted from landfill",
@@ -48,7 +53,12 @@ export default function StatsCard() {
             className="py-16 sm:py-0 w-full shrink-0 flex flex-col items-center justify-center transition-transform ease-out duration-500"
             style={{ transform: `translateX(-${current * 100}%)` }}
           >
-            <h1 className="text-center text-5xl font-bold">
+            <h1
+              className={clsx(
+                "text-center h5-large ",
+                item?.smallerText && "!text-5xl"
+              )}
+            >
               {index == current ? (
                 <CountUp duration={1} end={item.header} />
               ) : (

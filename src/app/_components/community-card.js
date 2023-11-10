@@ -48,7 +48,7 @@ export default function CommunityCard() {
           className="w-full h-40 shrink-0 flex flex-col p-5 transition-transform ease-out duration-500"
           style={{ transform: `translateX(-${current * 100}%)` }}
         >
-          <h5 className="max-w-[250px] sm:px-0 custom-em tracking-tighter text-[21px] lg:text-2xl font-bold">
+          <h5 className="max-w-[250px] sm:px-0 custom-em tracking-tighter text-[21px] lg:text-2xl font-semibold">
             {parse(item.description)}
           </h5>
         </div>

@@ -3,6 +3,37 @@
 @tailwind utilities;
 
 @font-face {
+  font-family: "Matter SQ";
+  src: url("../../public/font/matter-sq-regular-1.woff2") format("truetype");
+  font-weight: normal;
+}
+@font-face {
+  font-family: "Matter SQ";
+  src: url("../../public/font/matter-sq-bold.woff2") format("truetype");
+  font-weight: 800;
+}
+@font-face {
+  font-family: "Matter SQ";
+  src: url("../../public/font/matter-sq-medium.woff2") format("truetype");
+  font-weight: 500;
+}
+@font-face {
+  font-family: "Matter SQ";
+  src: url("../../public/font/matter-sq-light.woff2") format("truetype");
+  font-weight: 300;
+}
+@font-face {
+  font-family: "Matter SQ";
+  src: url("../../public/font/matter-sq-semibold.woff2") format("truetype");
+  font-weight: 600;
+}
+@font-face {
+  font-family: "Matter SQ";
+  src: url("../../public/font/matter-sq-heavy.woff2") format("truetype");
+  font-weight: 700;
+}
+/*
+@font-face {
   font-family: "Matter SQ Regular";
   src: url("https://db.onlinewebfonts.com/t/8611cf274fd66935b8f771ac84029521.eot");
   src: url("https://db.onlinewebfonts.com/t/8611cf274fd66935b8f771ac84029521.eot?#iefix")
@@ -29,14 +60,14 @@
       format("truetype"),
     url("https://db.onlinewebfonts.com/t/367cb1d4d8a017fec88cbbcf75d6b3cc.svg#Matter SQ Medium")
       format("svg");
-}
+} */
 
 html {
   scroll-behavior: smooth;
 }
 
 body {
-  font-family: "Matter SQ Regular" !important;
+  font-family: "Matter SQ", sans-serif;
   scroll-behavior: smooth;
 }
 
@@ -79,6 +110,11 @@ h4 {
 
 h5 {
   font-size: clamp(1.313rem, 1.17rem + 0.45vw, 1.625rem);
+}
+
+.h5-large {
+  font-size: clamp(4.375rem, 4.091rem + 0.91vw, 5rem);
+  font-weight: 600;
 }
 
 h1,
