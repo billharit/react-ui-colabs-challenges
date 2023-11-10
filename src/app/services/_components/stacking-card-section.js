@@ -60,15 +60,15 @@ export default function StackingCardSection() {
         <ul id="#card-list">
           {dataList.map((item, index) => (
             <li
-              className="h-[70vh] cursor-pointer max-h-[850px] w-full sticky card"
+              className="cursor-pointer max-h-[850px] w-full sticky card"
               id={`card${index + 1}`}
               key={index}
             >
               <div
-                className="card-body flex flex-col items-start gap-12 lg:flex-row p-[30px] lg:py-[60px]"
+                className="h-[70vh] min-h-[750px] card-body flex flex-col items-start gap-12 lg:flex-row p-[30px] lg:py-[60px]"
                 style={{ backgroundColor: item.bgColor }}
               >
-                <div className="relative lg:h-full h-1/2 w-full lg:w-1/3 overflow-hidden rounded-[30px]">
+                <div className="relative lg:h-full min-h-[150px] w-full lg:w-1/3 overflow-hidden rounded-[30px]">
                   <Image
                     fill
                     src={item.image}

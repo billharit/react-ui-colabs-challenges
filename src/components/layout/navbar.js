@@ -112,11 +112,11 @@ export default function Navbar() {
             <LiaSearchSolid size={24} />
           </button>
         </div>
-        <div className="lg:hidden flex items-center justify-center gap-5 text-lg font-medium mr-[10px] translate-y-1">
+        <div className="lg:hidden flex items-center justify-center gap-2 mt-3 text-lg font-medium mr-[10px] ">
           <button
             onClick={toggleNavBar}
             className={clsx(
-              "flex items-center py-[3px] justify-center px-3 rounded-[20px] transition-all duration-300",
+              "flex items-center py-[3px] font-semibold justify-center px-3 rounded-[20px] transition-all duration-300",
               {
                 "bg-[#d9db4d]": !isNavbarOpened,
                 "outline-black outline-2 outline": isNavbarOpened,
@@ -127,7 +127,7 @@ export default function Navbar() {
           </button>
           <div
             className={clsx(
-              "h-full w-full flex items-center transition-all duration-300 px-4 rounded-t-[20px] relative",
+              "h-full w-full flex items-center transition-all duration-300 px-2 rounded-t-[20px] relative",
               {
                 "bg-[#d9db4d]": isNavbarOpened,
                 "bg-transparent": !isNavbarOpened,
@@ -136,7 +136,7 @@ export default function Navbar() {
           >
             <InvertedCorner
               className={clsx(
-                "absolute -left-5 bottom-0 -translate-y-1 duration-300 transition-opacity rotate-180",
+                "absolute -left-5 bottom-0  duration-300 transition-opacity rotate-180",
                 {
                   "opacity-100": isNavbarOpened,
                   "opacity-0": !isNavbarOpened,
@@ -192,13 +192,20 @@ export default function Navbar() {
           </div>
           <nav className="w-full">
             <ul className="w-full text-[32px] pt-6 pb-10">
-              <li data-fade="1" className="border-b border-black py-[15px]">
-                <Link href="/">Home </Link>
+              <li data-fade-top="1" className="border-b border-black py-[15px]">
+                <Link
+                  className={clsx(
+                    pathChange == "/" && "font-bold text-[#005241]"
+                  )}
+                  href="/"
+                >
+                  Home{" "}
+                </Link>
               </li>
               {navList.map((item, index) => (
                 <li
                   key={index}
-                  data-fade={index + 1}
+                  data-fade-top={index + 1}
                   className="border-b border-black py-[15px]"
                 >
                   <Link

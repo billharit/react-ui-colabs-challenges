@@ -15,7 +15,7 @@ import clsx from "clsx";
 
 export default function Footer() {
   return (
-    <div className="flex flex-col gap-[10px] pb-[10px] bg-custom-white">
+    <div className="flex flex-col gap-[10px] pb-[10px] overflow-x-hidden bg-custom-white">
       <InView triggerOnce threshold={0.5}>
         {({ inView, ref }) => (
           <div

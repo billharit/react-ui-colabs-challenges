@@ -26,7 +26,7 @@ export default function HomeContent() {
     }
   };
   return (
-    <main className="flex min-h-screen bg-custom-white flex-col items-center ">
+    <main className="flex min-h-screen bg-custom-white flex-col items-center overflow-x-hidden">
       <section className="container pt-16 lg:pt-[10px] mb-20 w-full h-auto sm:h-[95vh] min-h-[630px] gap-[10px] justify-between flex flex-col sm:flex-row">
         <VideoHero scrollToSectionTwoRef={scrollToSectionTwoRef} />
         <div

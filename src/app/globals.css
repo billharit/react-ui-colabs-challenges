@@ -191,6 +191,18 @@ h5 {
   transition-delay: 300ms;
   transition-property: transform, opacity;
 }
+.fade-in-start [data-fade-top="4"] {
+  transition-delay: 400ms;
+  transition-property: transform, opacity;
+}
+.fade-in-start [data-fade-top="5"] {
+  transition-delay: 500ms;
+  transition-property: transform, opacity;
+}
+.fade-in-start [data-fade-top="6"] {
+  transition-delay: 600ms;
+  transition-property: transform, opacity;
+}
 .fade-in-start [data-fade-left="1"] {
   transition-delay: 100ms;
   transition-property: transform, opacity;

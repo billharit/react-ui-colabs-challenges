@@ -63,7 +63,7 @@ export default function WhyColabSection() {
           well-being of people and the planet.
         </h3>
       </div>
-      <InView threshold={0.3} triggerOnce>
+      <InView triggerOnce>
         {({ inView, ref }) => (
           <div
             ref={ref}
