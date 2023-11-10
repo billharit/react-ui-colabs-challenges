@@ -40,7 +40,7 @@ export default function StatsCard() {
     return () => clearInterval(slideInterval);
   });
   return (
-    <div className="w-full">
+    <div className="w-full" data-fade-left="1">
       <div className="sm:aspect-square rounded-[30px] sm:rounded-full flex-nowrap overflow-hidden  flex bg-[#dcb688]  relative">
         {statsList.map((item, index) => (
           <div

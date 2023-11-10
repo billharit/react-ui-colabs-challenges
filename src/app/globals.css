@@ -104,8 +104,6 @@ h5 {
   .video-font {
     font-size: 42px;
   }
-  .narrow {
-  }
 }
 
 .span-font {
@@ -138,11 +136,37 @@ h5 {
 /* #region  /**=========== Fade In =========== */
 
 .fade-in-start [data-fade] {
-  @apply translate-y-0  opacity-100;
+  @apply translate-y-0 translate-x-0 opacity-100;
 }
+.fade-in-start [data-fade-top] {
+  @apply translate-y-0 translate-x-0 opacity-100;
+}
+.fade-in-start [data-fade-left] {
+  @apply translate-y-0 translate-x-0 opacity-100;
+}
+.fade-in-start [data-fade-right] {
+  @apply translate-y-0 translate-x-0 opacity-100;
+}
+.fade-in-start [data-fade-bottom] {
+  @apply translate-y-0 translate-x-0 opacity-100;
+}
+
 [data-fade] {
-  @apply -translate-y-10 opacity-0 transition duration-[400ms] ease-out;
+  @apply opacity-0 transition duration-300 ease-out;
 }
+[data-fade-top] {
+  @apply opacity-0 -translate-y-10 transition duration-300 ease-out;
+}
+[data-fade-left] {
+  @apply opacity-0 translate-x-10 transition duration-300 ease-out;
+}
+[data-fade-right] {
+  @apply opacity-0 -translate-x-10 transition duration-300 ease-out;
+}
+[data-fade-bottom] {
+  @apply opacity-0 translate-y-10 transition duration-300 ease-out;
+}
+
 .fade-in-start [data-fade="1"] {
   transition-delay: 100ms;
   transition-property: transform, opacity;
@@ -155,24 +179,53 @@ h5 {
   transition-delay: 300ms;
   transition-property: transform, opacity;
 }
-.fade-in-start [data-fade="4"] {
-  transition-delay: 400ms;
+.fade-in-start [data-fade-top="1"] {
+  transition-delay: 100ms;
   transition-property: transform, opacity;
 }
-.fade-in-start [data-fade="5"] {
-  transition-delay: 500ms;
+.fade-in-start [data-fade-top="2"] {
+  transition-delay: 200ms;
   transition-property: transform, opacity;
 }
-.fade-in-start [data-fade="6"] {
-  transition-delay: 600ms;
+.fade-in-start [data-fade-top="3"] {
+  transition-delay: 300ms;
   transition-property: transform, opacity;
 }
-.fade-in-start [data-fade="7"] {
-  transition-delay: 700ms;
+.fade-in-start [data-fade-left="1"] {
+  transition-delay: 100ms;
   transition-property: transform, opacity;
 }
-.fade-in-start [data-fade="8"] {
-  transition-delay: 800ms;
+.fade-in-start [data-fade-left="2"] {
+  transition-delay: 200ms;
   transition-property: transform, opacity;
 }
+.fade-in-start [data-fade-left="3"] {
+  transition-delay: 300ms;
+  transition-property: transform, opacity;
+}
+.fade-in-start [data-fade-right="1"] {
+  transition-delay: 100ms;
+  transition-property: transform, opacity;
+}
+.fade-in-start [data-fade-right="2"] {
+  transition-delay: 200ms;
+  transition-property: transform, opacity;
+}
+.fade-in-start [data-fade-right="3"] {
+  transition-delay: 300ms;
+  transition-property: transform, opacity;
+}
+.fade-in-start [data-fade-bottom="1"] {
+  transition-delay: 100ms;
+  transition-property: transform, opacity;
+}
+.fade-in-start [data-fade-bottom="2"] {
+  transition-delay: 200ms;
+  transition-property: transform, opacity;
+}
+.fade-in-start [data-fade-bottom="3"] {
+  transition-delay: 300ms;
+  transition-property: transform, opacity;
+}
+
 /* #endregion  /**======== Fade In =========== */

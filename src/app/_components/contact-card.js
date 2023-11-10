@@ -10,7 +10,10 @@ const Jarallax = dynamic(() => import("@/components/shared/jarallax"), {
 
 export default function ContactCard() {
   return (
-    <div className="group w-full h-full relative rounded-[30px] rounded-tl-none min-h-[170px]">
+    <div
+      data-fade-left="2"
+      className="group w-full h-full relative rounded-[30px] rounded-tl-none min-h-[170px]"
+    >
       <h5 className="absolute text-white top-4 left-4 font-semibold z-10 text-[21px] tracking-tighter sm:text-2xl">
         Join the Lab
       </h5>

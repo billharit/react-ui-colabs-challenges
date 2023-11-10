@@ -60,7 +60,7 @@ export default function StackingCardSection() {
         <ul id="#card-list">
           {dataList.map((item, index) => (
             <li
-              className="h-[70vh] max-h-[850px] w-full sticky card"
+              className="h-[70vh] cursor-pointer max-h-[850px] w-full sticky card"
               id={`card${index + 1}`}
               key={index}
             >

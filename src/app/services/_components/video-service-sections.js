@@ -1,12 +1,16 @@
+"use client";
 import InvertedCorner from "@/components/shared/inverted-corner";
 import { AiOutlineArrowRight } from "react-icons/ai";
 import clsx from "clsx";
+import useLoaded from "@/hooks/use-loaded";
 import Link from "next/link";
 
-export default function VideoServiceSection() {
+export default function VideoServiceSection({ scrollToSectionTwoRef }) {
+  const isLoaded = useLoaded();
+
   return (
-    <div className="container">
-      <div className=" relative overflow-hidden ">
+    <div className={clsx("container", isLoaded && "fade-in-start")}>
+      <div data-fade="1" className=" relative overflow-hidden ">
         <video
           src="/vortex.mp4"
           className="rounded-[30px] w-full  h-[95vh] rounded-bl-none object-cover"
@@ -36,14 +40,14 @@ export default function VideoServiceSection() {
             >
               Co-Labs gives people a place to experiment and create
             </h1>
-            <Link href="#section-two">
-              <button
-                className="hidden rounded-full h-[50px] w-[50px] border border-black mt-5 sm:flex items-center justify-center"
-                data-fade="2"
-              >
-                <AiOutlineArrowRight className="rotate-90 text-lg" />
-              </button>
-            </Link>
+
+            <button
+              onClick={scrollToSectionTwoRef}
+              className="hidden rounded-full h-[50px] w-[50px] border border-black mt-5 sm:flex items-center justify-center"
+              data-fade="2"
+            >
+              <AiOutlineArrowRight className="rotate-90 text-lg" />
+            </button>
           </div>
         </div>
       </div>

@@ -38,7 +38,10 @@ export default function CommunityCard() {
     return () => clearInterval(slideInterval);
   });
   return (
-    <div className="group w-full flex relative overflow-hidden sm:h-full h-full min-h-[220px]  bg-[#32c58b] rounded-[30px] row-span-2 sm:min-h-[140px]">
+    <div
+      data-fade-left="3"
+      className="group w-full flex relative overflow-hidden sm:h-full h-full min-h-[220px]  bg-[#32c58b] rounded-[30px] row-span-2 sm:min-h-[140px]"
+    >
       {cardList.map((item, i) => (
         <div
           key={i}

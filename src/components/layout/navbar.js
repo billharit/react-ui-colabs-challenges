@@ -55,19 +55,27 @@ export default function Navbar() {
               width={30}
               height={30}
             />
-            <Image
-              src="/logo.svg"
-              alt="Colabs Logo"
-              className="pt-[15px] pr-[15px] pb-[15px] lg:pt-[25px] lg:pr-[30px] lg:pb-[12px] lg:pl-[15px] translate-y-[3px] lg:-translate-y-1"
-              fill={true}
-              sizes="100%"
-              priority
-            />
+            <Link href="/">
+              <Image
+                src="/logo.svg"
+                alt="Colabs Logo"
+                className="pt-[15px] pr-[15px] pb-[15px] lg:pt-[25px] lg:pr-[30px] lg:pb-[12px] lg:pl-[15px] translate-y-[3px] lg:-translate-y-1"
+                fill={true}
+                sizes="100%"
+                priority
+              />
+            </Link>
           </div>
           <nav className="hidden lg:flex bg-transparent pr-[10px] pl-[50px] -translate-x-[50px] items-center">
             <ul className="flex items-center h-[58px] ml-[10px] px-[25px] rounded-[30px] border shadow-nav-shadow bg-hsla-white backdrop-blur-[10px] ">
               {navList.map((item, index) => (
-                <li key={index} className="px-[15px] hover:text-[#005241]">
+                <li
+                  key={index}
+                  className={clsx(
+                    "px-[15px] hover:text-[#005241]",
+                    pathChange == item.url && "font-bold"
+                  )}
+                >
                   <Link href={item.url}>{item.title}</Link>
                 </li>
               ))}
@@ -193,7 +201,14 @@ export default function Navbar() {
                   data-fade={index + 1}
                   className="border-b border-black py-[15px]"
                 >
-                  <Link href={item.url}>{item.title}</Link>
+                  <Link
+                    className={clsx(
+                      pathChange == item.url && "font-bold text-[#005241]"
+                    )}
+                    href={item.url}
+                  >
+                    {item.title}
+                  </Link>
                 </li>
               ))}
             </ul>

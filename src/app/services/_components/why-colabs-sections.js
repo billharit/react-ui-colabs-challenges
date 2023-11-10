@@ -1,4 +1,6 @@
 import Image from "next/image";
+import clsx from "clsx";
+import { InView } from "react-intersection-observer";
 
 export default function WhyColabSection() {
   const dataList = [
@@ -61,29 +63,47 @@ export default function WhyColabSection() {
           well-being of people and the planet.
         </h3>
       </div>
-      <div className="container narrow flex flex-col lg:flex-row justify-between ">
-        <div className="w-[200px] mb-5 flex-shrink-0">
-          <span className="rounded-[20px] py-[5px] px-[10px] border border-black">
-            Why CoLabs
-          </span>
-        </div>
-        <div className="grid grid-cols-1 sm:grid-cols-3 w-full gap-[10px]">
-          {dataList.map((item, index) => (
+      <InView threshold={0.3} triggerOnce>
+        {({ inView, ref }) => (
+          <div
+            ref={ref}
+            className="container narrow flex flex-col lg:flex-row justify-between "
+          >
             <div
-              key={index}
-              className="rounded-[20px] p-5 bg-white border border-[#d3d3d3] flex flex-col justify-between"
+              className={clsx(
+                "w-[200px] mb-5 flex-shrink-0 delay-100 duration-300",
+                inView && "opacity-100 translate-x-0",
+                !inView && "opacity-0 -translate-x-10"
+              )}
             >
-              <div>
-                <h4 className="mb-[15px] max-w-[260px]">{item.header}</h4>
-                <p className="mb-[50px]">{item.paragraph}</p>
-              </div>
-              <span className="w-[50px] h-[50px] relative rounded-full aspect-square bg-yellow-700">
-                <Image fill sizes="100%" alt={item.icon} src={item.icon} />
+              <span className="rounded-[20px] py-[5px] px-[10px] border border-black">
+                Why CoLabs
               </span>
             </div>
-          ))}
-        </div>
-      </div>
+            <div className="grid grid-cols-1 sm:grid-cols-3 w-full gap-[10px]">
+              {dataList.map((item, index) => (
+                <div
+                  key={index}
+                  className={clsx(
+                    "rounded-[20px] p-5 bg-white border border-[#d3d3d3] flex flex-col justify-between duration-300",
+                    inView && "opacity-100 translate-y-0",
+                    !inView && "opacity-0 -translate-y-10"
+                  )}
+                  style={{ transitionDelay: `${100 + 50 * (index + 1)}ms` }}
+                >
+                  <div>
+                    <h4 className="mb-[15px] max-w-[260px]">{item.header}</h4>
+                    <p className="mb-[50px]">{item.paragraph}</p>
+                  </div>
+                  <span className="w-[50px] h-[50px] relative rounded-full aspect-square bg-yellow-700">
+                    <Image fill sizes="100%" alt={item.icon} src={item.icon} />
+                  </span>
+                </div>
+              ))}
+            </div>
+          </div>
+        )}
+      </InView>
     </div>
   );
 }
