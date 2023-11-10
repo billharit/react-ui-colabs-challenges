@@ -1,52 +1,54 @@
+import Image from "next/image";
+
 export default function WhyColabSection() {
   const dataList = [
     {
       header: "Access enabling infrastructure",
       paragraph:
         "Co-Labs membership offers state-of-the-art facilities, equipment, and services to foster innovation in the biotechnology sector.",
-      icon: "",
+      icon: "/iconbenefit.webp",
     },
     {
       header: "A collaborative eco system",
       paragraph:
         "Join a thriving community of like-minded researchers, entrepreneurs, and professionals, encouraging collaboration and driving advancements in your field.",
-      icon: "",
+      icon: "/iconhand.svg",
     },
     {
       header: "Educational opportunities",
       paragraph:
         "Benefit from transformative educational programmes focused on STEM, critical and living systems thinking, and eco-literacy.",
-      icon: "",
+      icon: "/iconbenefit.webp",
     },
     {
       header: "Support a circular business model",
       paragraph:
         "By becoming a member, you’re actively contributing to reducing the environmental impact of innovation via our unique lab-as-a-service business model.",
-      icon: "",
+      icon: "/iconhand.svg",
     },
     {
       header: "Accelerate innovation",
       paragraph:
         "Tap into Co-Labs’ resources, expertise, and networks to catalyse your research and development efforts, bringing your ideas to life.",
-      icon: "",
+      icon: "/iconhand.svg",
     },
     {
       header: "Foster connections",
       paragraph:
         "Engage with industry partners, government agencies, and academic institutions through Co-Labs’ extensive network, amplifying your impact and opening doors for collaboration.",
-      icon: "",
+      icon: "/iconbenefit.webp",
     },
     {
       header: "Tailored support",
       paragraph:
         "Receive personalised guidance and assistance to help you navigate the complexities of the biotechnology landscape and accelerate your success.",
-      icon: "",
+      icon: "/iconhand.svg",
     },
     {
       header: "Champion a sustainable future",
       paragraph:
         "Join a movement dedicated to creating systemic change and driving win-win-win solutions for individuals, communities, and ecosystems.",
-      icon: "",
+      icon: "/iconbenefit.webp",
     },
   ];
 
@@ -59,23 +61,25 @@ export default function WhyColabSection() {
           well-being of people and the planet.
         </h3>
       </div>
-      <div className="container narrow flex flex-wrap justify-between ">
+      <div className="container narrow flex flex-col lg:flex-row justify-between ">
         <div className="w-[200px] mb-5 flex-shrink-0">
-          <span className="rounded-[20px] lg:py-[5px] px-[10px] border border-black">
+          <span className="rounded-[20px] py-[5px] px-[10px] border border-black">
             Why CoLabs
           </span>
         </div>
-        <div className="grid grid-cols-3 w-full gap-[10px]">
+        <div className="grid grid-cols-1 sm:grid-cols-3 w-full gap-[10px]">
           {dataList.map((item, index) => (
             <div
               key={index}
-              className="rounded-[20px] p-5 bg-white border flex flex-col justify-between"
+              className="rounded-[20px] p-5 bg-white border border-[#d3d3d3] flex flex-col justify-between"
             >
               <div>
                 <h4 className="mb-[15px] max-w-[260px]">{item.header}</h4>
                 <p className="mb-[50px]">{item.paragraph}</p>
               </div>
-              <span className="w-[50px] h-[50px] rounded-full aspect-square bg-yellow-700"></span>
+              <span className="w-[50px] h-[50px] relative rounded-full aspect-square bg-yellow-700">
+                <Image fill sizes="100%" alt={item.icon} src={item.icon} />
+              </span>
             </div>
           ))}
         </div>

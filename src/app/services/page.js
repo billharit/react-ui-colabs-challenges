@@ -9,10 +9,10 @@ export default function Service() {
       <div className="pt-[10px] pb-10">
         <VideoServiceSection />
       </div>
-      <div className="min-h-screen">
+      <div className="pt-20">
         <StackingCardSection />
       </div>
-      <div className="">
+      <div className="pt-20">
         <WhyColabSection />
       </div>
     </main>

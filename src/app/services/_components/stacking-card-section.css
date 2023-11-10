@@ -1,8 +1,8 @@
 :root {
   --cards: 4;
   --cardHeight: 70vh;
-  --cardTopPadding: 45px;
-  --cardMargin: 4vw;
+  --cardTopPadding: 20px;
+  --cardMargin: 0;
   --xPadding: 10px;
 }
 
@@ -31,34 +31,45 @@
 
 #card1 {
   --index: 1;
+  --size: 3;
 }
 #card2 {
   --index: 2;
+  --size: 2;
 }
 #card3 {
   --index: 3;
+  --size: 1;
 }
 #card4 {
   --index: 4;
+  --size: 0;
 }
 
 .card {
   position: sticky;
-  top: 0;
+  top: 16%;
   padding-top: calc(var(--index) * var(--cardTopPadding));
-  padding-right: calc(var(--index) * var(--xPadding));
-  padding-left: calc(var(--index) * var(--xPadding));
+  padding-right: calc(var(--size) * 45px);
+  padding-left: calc(var(--size) * 45px);
+}
+
+@media screen and (max-width: 1024px) {
+  .card {
+    padding-right: calc(var(--size) * 10px);
+    padding-left: calc(var(--size) * 10px);
+  }
+}
+
+.card-tags {
+  position: sticky;
+  top: 10%;
 }
 
 .card-body {
   box-sizing: border-box;
-  padding: 30px;
-  border-radius: 50px;
-  box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.3);
+  border-radius: 20px;
   height: var(--cardHeight);
-  display: flex;
-  justify-content: center;
-  align-items: center;
   transition: all 0.5s;
 }
 
