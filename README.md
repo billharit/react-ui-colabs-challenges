@@ -1,8 +1,11 @@
 # React UI Challenges
 
+## Deployment
+[https://react-ui-colabs-challenges.vercel.app/](https://react-ui-colabs-challenges.vercel.app/)
+
 ## Task
 
-Replicate the home and services pages of [colabs.com.au](colabs.com.au) using React.
+Replicate the home and services pages of [colabs.com.au](https://colabs.com.au) using React.
 
 ## Technologies
 
